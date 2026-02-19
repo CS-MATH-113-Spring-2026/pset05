@@ -1,0 +1,162 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{arabtex}
+\usepackage{polyglossia}
+
+\setmainlanguage{english}
+\setotherlanguage{urdu}
+\newfontfamily\urdufont[Scale=1.25]{jameel.ttf}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\lcm}{\emph{lcm}}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS/MATH 113, SPRING 2026}{Pset 05: Proofs}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+% \printanswers %Uncomment this line
+
+\title{Problem Set 05: Proofs}
+\author{Blingblong} % <=== replace with your student ID, e.g. xy012345
+\date{CS/MATH 113 Discrete Mathematics\\Habib University\\Spring 2026}
+
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{center}
+    \texturdu{عشق سے طبیعت نے زیست کا مزا پایا}
+    \\\texturdu{درد کی دوا پائی درد بے دوا پایا}
+    \begin{flushleft}
+        \hspace*{4.5cm} (\texturdu{مرزا غالب })
+    \end{flushleft}
+\end{center}
+    
+      
+
+In this problem set you may be using needing the following definitions and theorems
+\begin{definition}
+    An integer $p>1$ is called a prime number, or simply a prime, iff $\forall x \in \mathbb{Z}^+, \; x|p \implies x = 1$ or $x = p$. In other words an integer $p > 1$ is prime, if its only positive divisors are $1$ and $p$.
+    An integer greater than 1 that is not a prime is termed composite.
+\end{definition}
+
+\begin{definition}
+    A real number $r\in \mathbb{R}$ is called rational, if there exists $p,q\in \mathbb{Z}$, such that $r = \frac{p}{q}$ where $q \neq 0$. A real number that is not rational is called irrational.
+\end{definition}
+
+\begin{definition}[Divisor and GCD]
+    Let $a, b \in \mathbb{Z}$, $a \neq 0$ is said to divide $b$ or $b$ is divisible by $a$ (denoted as $a \mid b$), if there exists an integer $k$ such that $b = ak$. If no such $k$ exists then we say $a$ doesn't divide $b$ (denoted by $a\nmid b$).
+
+    For integers $a$ and $b$, $d$ is the greatest common divisor of $a$ and $b$ (denoted as $\gcd(a,b) = d$), if $d\mid a$ and $d \mid b$ and $\forall c \in \mathbb{Z}, \;c\mid a \text{ and } c \mid b \implies c\leq d$.
+\end{definition}
+
+\begin{definition}[Multiple and LCM]
+    For integers $a$ and $b$, a positive integer $m$ is the least common multiple of $a$ and $b$ (denoted as $\lcm(a,b) = m$), if $a\mid m$ and $b \mid m$ and $\forall c \in \mathbb{Z}^+, \;a\mid c \text{ and } b \mid c \implies m\leq c$.
+\end{definition}
+
+\begin{theorem}[Division algorithm]
+    If $a,b \in \mathbb{Z}$, where $b>0$, then there exists unique $q,r \in \mathbb{Z}$, $a=bq+r$ where, $0 \leq r <b$     
+\end{theorem}
+
+\begin{theorem}[Bezout's Lemma]
+    For any integers $a$ and $b$ there exist integers $s$ and $t$ such that $gcd(a,b) = as + bt$
+\end{theorem}
+
+\begin{corollary}[Corollary of Bezout's Lemma]
+    If $a$ and $b$ are relatively prime then $as+bt = 1$
+\end{corollary}
+
+\begin{theorem}[Fundamental Theorem of Arithmetic]
+    Every integer $N > 1$ has a prime factorization, meaning either $N$ is itself prime or can be written as a product of prime numbers.
+\end{theorem}
+
+\begin{theorem}[A random identity might be used later]
+    Let $a$ and $x$ be positive integers, then $a^x - 1 = (a-1)(a^{x-1} + a^{x-2} + \dots a + 1)$
+\end{theorem}
+
+
+\pagebreak
+
+\section*{Problems}
+\begin{questions}
+    \question List all the prime factors of $50!$. How did you find all of these? Is there a general way to define all the prime factors of $n!$ for any $n$?
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question Prove or disprove the following claim: $x \in \mathbb{Z}$. If $7x + 9$ is even, then $x$ is odd.
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question Prove or disprove the following claim: if $n$ is an integer and $n^2$ is divisible by 4, then $n$ is divisible by 4.
+    \begin{solution}
+        % Enter solution here   
+    \end{solution}
+    
+    \question Prove Euclid's Lemma: if $p$ is a prime number that divides $ab$ then $p$ divides $a$ or $p$ divides $b$.
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question Show that $\sqrt{p}$ is irrational for any prime number $p$.
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question Show that if $2^n - 1$ is prime then so is $n$. 
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question You and your friend are playing a game where one of you thinks of a person and the other person has to ask Yes/No questions to figure out who that person is. As a computer scientist such games are trivial to you guys. Your friend claims that you can find anyone in the world within 33 questions. Prove or disprove your friend's claim.
+    \begin{solution}
+        % Enter solution here
+    \end{solution}
+
+    \question A \textit{perfect universe} is a universe where the combination of any two elements of the universe yields a unique element of the universe (we write the `combination' of element $a$ with element $b$ as the element $ab$), such that the following holds in the universe (henceforth referred to as $U$): 
+    \begin{itemize}
+    \item Associativity: For all elements $a, b, c$ in $U$, $(ab)c = a(bc)$. 
+    \item Existence of an \textit{identity} element: There exists an element $e$ in $U$ such that when combined with any element $a$ in $U$, it does not change $a$ i.e. $\exists e \in U \ni \forall a \in U, ea=ae=a$. If $e$ is such an element of $U$ we call $e$ the \textit{identity} of $U$.
+    \item Existence of \textit{enemies}: For each element $a$ in $U$, there exists an element $b$ in $U$ such that $a$ combined with $b$ produces the identity element $e$ of $U$ i.e. $\forall a \in U, \exists b \in U \ni ab= ba = e$. If $b$ is such an element for $a$, we call $b$ the \textit{enemy} of $a$.
+    \end{itemize}
+    Note that a perfect universe need not be commutative, i.e., it is not necessary for all elements $a, b\in U$ to have the property that $ab=ba$.
+
+    \begin{parts}
+    \part Prove or disprove that in a perfect universe, there is only one identity element.
+      \begin{solution}
+        % Enter your solution here.
+      \end{solution}
+
+    \part Prove or disprove that in a perfect universe, every element has a unique enemy.
+      \begin{solution}
+        % Enter your solution here.
+      \end{solution}
+
+    \part Prove or disprove that for any elements $a$ and $b$ of a perfect universe, the enemy of $ab$ is the same as the enemy of $b$ combined with the enemy of $a$.
+      \begin{solution}
+        % Enter your solution here.
+      \end{solution}
+    \end{parts}
+
+\end{questions}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
